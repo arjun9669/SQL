@@ -1,3 +1,10 @@
+-- 🍕 Pizza Runner SQL Case Study
+-- Author: Arjun | Date: 2025-04-21
+
+-- -----------------------------
+-- 🧱 SCHEMA + TABLES
+-- -----------------------------
+
 CREATE DATABASE IF NOT EXISTS pizza_runner;
 USE pizza_runner;
 
