@@ -99,4 +99,4 @@ Each project includes:
 I'm **Arjun**, an aspiring data analyst passionate about solving business problems with data.  
 I'm currently building projects using SQL, Python, Excel, and BI tools.
 
-📫 [Connect with me on LinkedIn](www.linkedin.com/in/arjun-analytics)
+📫 [Connect with me on LinkedIn](https://linkedin.com/in/arjun-analytics)
