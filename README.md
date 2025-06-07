@@ -1,6 +1,6 @@
 # 📊 SQL Case Studies Portfolio – Arjun
 
-Welcome to my SQL portfolio showcasing 8 end-to-end case studies across various domains like retail, banking, e-commerce, HR, airline, education, and entertainment.
+Welcome to my SQL portfolio showcasing 13 end-to-end case studies across various domains like retail, banking, e-commerce, HR, airline, education, and entertainment.
 
 Each project includes:
 - 📁 Full database schema
@@ -14,75 +14,81 @@ Each project includes:
 
 ### 1. 🍕 Pizza Runner
 > Analyze deliveries, ingredients, and runner performance.
-- ✅ Setup tables (pizzas, orders, runners)
-- 🔍 Successful deliveries, average duration, topping frequency
-- 📦 SQL Features: `FIND_IN_SET`, `JOIN`, `REPLACE`, `GROUP BY`
-
 📁 Folder: `pizza_runner_case_study/`
 
 ---
 
 ### 2. 🛍️ E-Commerce Dashboard
-> Analyze online sales and customer behavior.
-- ✅ Total revenue, top products, revenue by category
-- 👥 Most active users and monthly trends
-- 📦 SQL Features: `JOIN`, `GROUP BY`, `DATE_FORMAT`
-
+> Track online sales and customer behavior.
 📁 Folder: `ecommerce_dashboard_case_study/`
 
 ---
 
 ### 3. 🏦 Banking Transactions
-> Track deposits, withdrawals, and high-value customer behavior.
-- ✅ Net balance, top withdrawers, suspicious withdrawals
-- 📦 SQL Features: `CASE WHEN`, filters, aggregation
-
+> Analyze deposits, withdrawals, and customer balances.
 📁 Folder: `banking_transactions_case_study/`
 
 ---
 
 ### 4. 🧑‍💼 HR Analytics
-> Analyze employee attrition, salaries, and department-wise metrics.
-- ✅ Highest paid per department, attrition stats, salary averages
-- 📦 SQL Features: `GROUP BY`, `HAVING`, `JOIN`
-
+> Explore employee salaries, attrition, and departments.
 📁 Folder: `hr_analytics_case_study/`
 
 ---
 
 ### 5. 🎬 Movie Ratings Platform
-> Analyze ratings by users, top-rated movies, and genre patterns.
-- ✅ Top-rated films, active users, underperforming movies
-- 📦 SQL Features: `AVG`, `COUNT`, filters, joins
-
+> Examine ratings, genres, and top reviewers.
 📁 Folder: `movie_ratings_case_study/`
 
 ---
 
 ### 6. 🏪 Retail Store Sales
-> Store-wise revenue, category trends, best-selling items.
-- ✅ Top customer spend, product performance, daily sales
-- 📦 SQL Features: `SUM`, `ORDER BY`, multiple joins
-
+> Identify top-performing stores and best-selling products.
 📁 Folder: `retail_store_case_study/`
 
 ---
 
 ### 7. 📚 Online Learning Platform
-> Analyze course completions, enrollments, and instructor impact.
-- ✅ Completion rates, dropouts, category breakdown
-- 📦 SQL Features: `ENUM`, `JOIN`, `CASE`, percentages
-
+> Analyze course completion, enrollments, and trends.
 📁 Folder: `learning_platform_case_study/`
 
 ---
 
 ### 8. ✈️ Airline Booking Analytics
-> Analyze passenger booking data, seat class revenue, and routes.
-- ✅ Top routes, revenue by class, country-wise income
-- 📦 SQL Features: `JOIN`, `GROUP BY`, revenue breakdown
-
+> Understand route performance and class-wise revenues.
 📁 Folder: `airline_bookings_case_study/`
+
+---
+
+## 🆕 New Case Studies (Assignments)
+
+### 9. 💳 Credit Card Transactions (Fraud Detection)
+> Flag large withdrawals, identify high-risk customers, and calculate fraud rates.
+📁 Folder: `credit_card_transactions_case_study/`
+
+---
+
+### 10. 🏥 Health & Insurance Claims
+> Track hospital claims, approvals, rejections, and cost insights.
+📁 Folder: `health_insurance_case_study/`
+
+---
+
+### 11. 📦 Warehouse & Logistics Management
+> Monitor shipments, delivery times, region-wise delays, and dispatch stats.
+📁 Folder: `logistics_warehouse_case_study/`
+
+---
+
+### 12. 📱 Mobile App Engagement
+> Understand user session trends, activity spikes, app stickiness, and drop-off.
+📁 Folder: `mobile_app_usage_case_study/`
+
+---
+
+### 13. 🧾 Loan Management System
+> Analyze loan disbursements, repayments, overdue balances, and branch-wise revenue.
+📁 Folder: `loan_management_case_study/`
 
 ---
 
@@ -90,13 +96,17 @@ Each project includes:
 
 - MySQL (All projects tested on MySQL 8+)
 - SQL Features: `JOIN`, `GROUP BY`, `HAVING`, `CASE`, `FIND_IN_SET`, `ORDER BY`, `LIMIT`
-- Domain Experience: Retail, HR, Banking, Airlines, EdTech, E-commerce
+- Domain Experience: Retail, Banking, HR, Healthcare, Insurance, Logistics, Education, E-commerce
 
 ---
 
-## 🚀 About Me
+## 👨‍💻 About Me
 
 I'm **Arjun**, an aspiring data analyst passionate about solving business problems with data.  
 I'm currently building projects using SQL, Python, Excel, and BI tools.
 
 📫 [Connect with me on LinkedIn](https://linkedin.com/in/arjun-analytics)
+
+---
+
+⭐ *Browse through each folder to explore schema, data inserts, and solved queries!*
