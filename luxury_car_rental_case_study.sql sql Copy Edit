@@ -1,0 +1,151 @@
+-- 🚘 Luxury Car Rental Platform – SQL Case Study
+-- Author: Arjun | Date: 2025-06-07
+
+-- -----------------------------
+-- 🧱 Schema Setup
+-- -----------------------------
+CREATE DATABASE IF NOT EXISTS luxury_car_rentals;
+USE luxury_car_rentals;
+
+-- Customers Table
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100),
+    phone_number VARCHAR(15),
+    license_number VARCHAR(20),
+    city VARCHAR(50)
+);
+
+-- Cars Table
+CREATE TABLE cars (
+    car_id INT AUTO_INCREMENT PRIMARY KEY,
+    brand VARCHAR(50),
+    model VARCHAR(50),
+    car_type ENUM('SUV', 'Sedan', 'Convertible', 'Luxury'),
+    daily_rate DECIMAL(10,2),
+    availability BOOLEAN
+);
+
+-- Rentals Table
+CREATE TABLE rentals (
+    rental_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_id INT,
+    car_id INT,
+    start_date DATE,
+    end_date DATE,
+    total_amount DECIMAL(10,2),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY (car_id) REFERENCES cars(car_id)
+);
+
+-- Accidents Table
+CREATE TABLE accidents (
+    accident_id INT AUTO_INCREMENT PRIMARY KEY,
+    rental_id INT,
+    accident_date DATE,
+    damage_description TEXT,
+    estimated_cost DECIMAL(10,2),
+    FOREIGN KEY (rental_id) REFERENCES rentals(rental_id)
+);
+
+-- Payments Table
+CREATE TABLE payments (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    rental_id INT,
+    payment_date DATE,
+    amount_paid DECIMAL(10,2),
+    payment_method VARCHAR(20),
+    FOREIGN KEY (rental_id) REFERENCES rentals(rental_id)
+);
+
+-- -----------------------------
+-- 📥 Insert Sample Data
+-- -----------------------------
+INSERT INTO customers (full_name, phone_number, license_number, city) VALUES
+('Rahul Kapoor', '9876543210', 'DL01AB1234', 'Delhi'),
+('Sneha Nair', '9988776655', 'MH02CD5678', 'Mumbai'),
+('Aarav Mehta', '9123456780', 'KA03EF9012', 'Bangalore');
+
+INSERT INTO cars (brand, model, car_type, daily_rate, availability) VALUES
+('BMW', 'X5', 'SUV', 10000.00, TRUE),
+('Mercedes', 'E-Class', 'Luxury', 15000.00, FALSE),
+('Audi', 'A3', 'Sedan', 9000.00, TRUE);
+
+INSERT INTO rentals (customer_id, car_id, start_date, end_date, total_amount) VALUES
+(1, 1, '2023-04-01', '2023-04-03', 30000.00),
+(2, 2, '2023-04-02', '2023-04-04', 45000.00),
+(3, 3, '2023-04-05', '2023-04-06', 18000.00);
+
+INSERT INTO accidents (rental_id, accident_date, damage_description, estimated_cost) VALUES
+(1, '2023-04-02', 'Minor bumper dent', 5000.00),
+(2, '2023-04-03', 'Front windshield crack', 12000.00);
+
+INSERT INTO payments (rental_id, payment_date, amount_paid, payment_method) VALUES
+(1, '2023-04-01', 30000.00, 'Credit Card'),
+(2, '2023-04-02', 45000.00, 'UPI'),
+(3, '2023-04-05', 18000.00, 'Cash');
+
+-- -----------------------------
+-- 📊 Analysis Queries (10)
+-- -----------------------------
+
+-- 1. Total revenue generated from all rentals
+SELECT SUM(total_amount) AS total_revenue FROM rentals;
+
+-- 2. Top paying customer
+SELECT c.full_name, SUM(r.total_amount) AS total_spent
+FROM rentals r
+JOIN customers c ON r.customer_id = c.customer_id
+GROUP BY c.full_name
+ORDER BY total_spent DESC
+LIMIT 1;
+
+-- 3. Most rented car brand
+SELECT car.brand, COUNT(*) AS rental_count
+FROM rentals r
+JOIN cars car ON r.car_id = car.car_id
+GROUP BY car.brand
+ORDER BY rental_count DESC
+LIMIT 1;
+
+-- 4. Number of rentals by car type
+SELECT car_type, COUNT(*) AS total_rentals
+FROM cars c
+JOIN rentals r ON c.car_id = r.car_id
+GROUP BY car_type;
+
+-- 5. Rentals with accidents and total damage cost
+SELECT r.rental_id, c.full_name, a.damage_description, a.estimated_cost
+FROM accidents a
+JOIN rentals r ON a.rental_id = r.rental_id
+JOIN customers c ON r.customer_id = c.customer_id;
+
+-- 6. Average rental amount by car type
+SELECT c.car_type, ROUND(AVG(r.total_amount), 2) AS avg_rental_amount
+FROM rentals r
+JOIN cars c ON r.car_id = c.car_id
+GROUP BY c.car_type;
+
+-- 7. Payment method distribution
+SELECT payment_method, COUNT(*) AS count
+FROM payments
+GROUP BY payment_method;
+
+-- 8. City-wise revenue
+SELECT c.city, SUM(r.total_amount) AS city_revenue
+FROM rentals r
+JOIN customers c ON r.customer_id = c.customer_id
+GROUP BY c.city;
+
+-- 9. Available cars by type
+SELECT car_type, COUNT(*) AS available_count
+FROM cars
+WHERE availability = TRUE
+GROUP BY car_type;
+
+-- 10. Average accident cost per car brand
+SELECT car.brand, ROUND(AVG(a.estimated_cost), 2) AS avg_accident_cost
+FROM accidents a
+JOIN rentals r ON a.rental_id = r.rental_id
+JOIN cars car ON r.car_id = car.car_id
+GROUP BY car.brand;
