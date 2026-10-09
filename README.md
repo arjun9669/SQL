@@ -1,112 +1,33 @@
-# 📊 SQL Case Studies Portfolio – Arjun
+# SQL Case Studies — Arjun Kumar
 
-Welcome to my SQL portfolio showcasing 13 end-to-end case studies across various domains like retail, banking, e-commerce, HR, airline, education, and entertainment.
+This repository contains **13 SQL script files** for portfolio practice in analytics and database querying. The scripts are stored at the repository root, not in individual folders.
 
-Each project includes:
-- 📁 Full database schema
-- 📥 Sample data
-- 📊 Analytical SQL queries
-- 📈 Business insights
+## Available scripts
 
----
+| Script | Topic |
+|---|---|
+| [`airline_bookings.sql`](./airline_bookings.sql) | Airline bookings |
+| [`banking_dashboard.sql`](./banking_dashboard.sql) | Banking |
+| [`crowdfunding_campaign_case_study.sql`](./crowdfunding_campaign_case_study.sql) | Crowdfunding |
+| [`ecommerce_dashboard.sql`](./ecommerce_dashboard.sql) | E-commerce |
+| [`gym_membership_case_study.sql`](./gym_membership_case_study.sql) | Gym membership |
+| [`hr_analytics.sql`](./hr_analytics.sql) | HR analytics |
+| [`learning_platform.sql`](./learning_platform.sql) | Online learning |
+| [`luxury_car_rental_case_study.sql sql Copy Edit`](./luxury_car_rental_case_study.sql%20sql%20Copy%20Edit) | Luxury car rental |
+| [`movie_ratings.sql`](./movie_ratings.sql) | Movie ratings |
+| [`music_festival_case_study.sql`](./music_festival_case_study.sql) | Music festival |
+| [`nft_marketplace_case_study.sql`](./nft_marketplace_case_study.sql) | NFT marketplace |
+| [`pizza_runner_case_study.sql`](./pizza_runner_case_study.sql) | Delivery analysis |
+| [`retail_store.sql`](./retail_store.sql) | Retail sales |
 
-## 🧾 Case Study List
+## Working with the examples
 
-### 1. 🍕 Pizza Runner
-> Analyze deliveries, ingredients, and runner performance.
-📁 Folder: `pizza_runner_case_study/`
+Open a script, review its schema/data requirements, and run applicable statements in a compatible SQL environment. Some examples may need adjustments for your database dialect. **Execution and compatibility have not been automatically tested as part of this portfolio cleanup.**
 
----
+## Skills demonstrated
 
-### 2. 🛍️ E-Commerce Dashboard
-> Track online sales and customer behavior.
-📁 Folder: `ecommerce_dashboard_case_study/`
-
----
-
-### 3. 🏦 Banking Transactions
-> Analyze deposits, withdrawals, and customer balances.
-📁 Folder: `banking_transactions_case_study/`
-
----
-
-### 4. 🧑‍💼 HR Analytics
-> Explore employee salaries, attrition, and departments.
-📁 Folder: `hr_analytics_case_study/`
+SQL query writing, joins, filtering, aggregations, grouping, conditional logic, and business-question analysis. See each script for the specific techniques it uses.
 
 ---
 
-### 5. 🎬 Movie Ratings Platform
-> Examine ratings, genres, and top reviewers.
-📁 Folder: `movie_ratings_case_study/`
-
----
-
-### 6. 🏪 Retail Store Sales
-> Identify top-performing stores and best-selling products.
-📁 Folder: `retail_store_case_study/`
-
----
-
-### 7. 📚 Online Learning Platform
-> Analyze course completion, enrollments, and trends.
-📁 Folder: `learning_platform_case_study/`
-
----
-
-### 8. ✈️ Airline Booking Analytics
-> Understand route performance and class-wise revenues.
-📁 Folder: `airline_bookings_case_study/`
-
----
-
-## 🆕 New Case Studies (Assignments)
-
-### 9. 💳 Credit Card Transactions (Fraud Detection)
-> Flag large withdrawals, identify high-risk customers, and calculate fraud rates.
-📁 Folder: `credit_card_transactions_case_study/`
-
----
-
-### 10. 🏥 Health & Insurance Claims
-> Track hospital claims, approvals, rejections, and cost insights.
-📁 Folder: `health_insurance_case_study/`
-
----
-
-### 11. 📦 Warehouse & Logistics Management
-> Monitor shipments, delivery times, region-wise delays, and dispatch stats.
-📁 Folder: `logistics_warehouse_case_study/`
-
----
-
-### 12. 📱 Mobile App Engagement
-> Understand user session trends, activity spikes, app stickiness, and drop-off.
-📁 Folder: `mobile_app_usage_case_study/`
-
----
-
-### 13. 🧾 Loan Management System
-> Analyze loan disbursements, repayments, overdue balances, and branch-wise revenue.
-📁 Folder: `loan_management_case_study/`
-
----
-
-## 💼 Tools Used
-
-- MySQL (All projects tested on MySQL 8+)
-- SQL Features: `JOIN`, `GROUP BY`, `HAVING`, `CASE`, `FIND_IN_SET`, `ORDER BY`, `LIMIT`
-- Domain Experience: Retail, Banking, HR, Healthcare, Insurance, Logistics, Education, E-commerce
-
----
-
-## 👨‍💻 About Me
-
-I'm **Arjun**, an aspiring data analyst passionate about solving business problems with data.  
-I'm currently building projects using SQL, Python, Excel, and BI tools.
-
-📫 [Connect with me on LinkedIn](https://linkedin.com/in/arjun-analytics)
-
----
-
-⭐ *Browse through each folder to explore schema, data inserts, and solved queries!*
+[GitHub profile](https://github.com/arjun9669) · [LinkedIn](https://www.linkedin.com/in/arjun-analytics)
